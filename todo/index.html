@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" id="inputTask" minlength="3" style="width: 100%;" placeholder="Название задачи → Enter"
+        style="width: 100%;" autofocus>
+    <div class="statusSelect">
+        <span>
+            <input type="radio" id="active" name="status" value="active" onclick="renderTasksInStatus(this.value)"
+                checked="true" />
+            <label for="active">В работе<span></span></label>
+        </span>
+        <span>
+            <input type="radio" id="done" name="status" value="done" onclick="renderTasksInStatus(this.value)" />
+            <label for="done">Решенные<span></span></label>
+
+        </span>
+        <span>
+            <input type="radio" id="deleted" name="status" value="deleted" onclick="renderTasksInStatus(this.value)" />
+            <label for="deleted">Архив<span></span></label>
+        </span>
+    </div>
+    <div id="tasksList">Нет задач, добавьте в поле выше</div>
+</body>
+<script src="script.js"></script>
+
+</html>

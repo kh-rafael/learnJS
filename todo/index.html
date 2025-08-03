@@ -2,29 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
-    <input type="text" id="inputTask" minlength="3" style="width: 100%;" placeholder="Название новой задачи → Enter"
-        style="width: 100%;" autofocus>
+    <input type="text" id="inputTask" minlength="3" style="width: 100%" placeholder="Новая задача → Enter"
+        style="width: 100%" autofocus />
     <div class="statusSelect">
         <span>
-            <input type="radio" id="active" name="status" value="active" onclick="renderTasksInStatus(this.value)"
-                checked="true" />
-            <label for="active">В работе<span></span></label>
+            <input type="radio" id="work" name="status" value="work" checked="true" />
+            <label for="work">В работе <span></span></label>
         </span>
         <span>
-            <input type="radio" id="done" name="status" value="done" onclick="renderTasksInStatus(this.value)" />
-            <label for="done">Решенные<span></span></label>
-
+            <input type="radio" id="done" name="status" value="done" />
+            <label for="done">Решенные <span></span></label>
         </span>
         <span>
-            <input type="radio" id="deleted" name="status" value="deleted" onclick="renderTasksInStatus(this.value)" />
-            <label for="deleted">Архив<span></span></label>
+            <input type="radio" id="archive" name="status" value="archive" />
+            <label for="archive">Архив <span></span></label>
         </span>
     </div>
     <div id="tasksList">Нет задач, добавьте в поле выше</div>
